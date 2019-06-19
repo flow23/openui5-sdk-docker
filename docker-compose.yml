@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  openui5_sdk:
+    build:
+      context: ./
+      args:
+        ui5_version: "${UI5_VERSION}"
+    restart: always
+    ports:
+      - 5000:80
+      - 5443:443
